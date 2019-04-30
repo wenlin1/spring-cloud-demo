@@ -16,7 +16,7 @@ import org.springframework.security.web.authentication.SavedRequestAwareAuthenti
  * spring-admin spring-boot监控启动类
  * @author wl
  * @description TODO
- * @date 2018年3月4日 上午11:09:34
+ * @date 2019年4月30日 上午11:09:34
  */
 @Configuration
 @EnableAutoConfiguration

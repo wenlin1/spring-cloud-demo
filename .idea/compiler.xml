@@ -7,11 +7,18 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="eureka-server" />
+        <module name="eureka-server-demo" />
+        <module name="example-service-demo" />
+        <module name="spring-boot-admin-demo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="com.wl" target="1.7" />
       <module name="eureka-server" target="1.7" />
+      <module name="eureka-server-demo" target="1.7" />
+      <module name="example-service-demo" target="1.7" />
+      <module name="spring-boot-admin-demo" target="1.7" />
+      <module name="spring-cloud-demo" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>

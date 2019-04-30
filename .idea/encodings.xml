@@ -3,6 +3,8 @@
   <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eureka-server-demo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/example-service-demo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-boot-admin-demo" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
