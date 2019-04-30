@@ -91,7 +91,7 @@
                         <!-- <index>true</index> -->
                         <manifest>
                             <!-- 作为程序入口来执行的class -->
-                            <mainClass>com.wl.demoGoodsServiceApplication</mainClass>
+                            <mainClass>com.wl.DemoExampleServiceApplication</mainClass>
                             <!-- 是否将依赖的classpath一起打包 -->
                             <addClasspath>true</addClasspath>
                             <!-- 依赖的classpath的前缀，也就是打包后生成的MANIFEST.MF文件里，引入的jar文件都会加上前缀。lib/，比如fastjson-1.2.7.jar，在mainfest文件里就会是lib/fastjson-1.2.7.jar  -->
