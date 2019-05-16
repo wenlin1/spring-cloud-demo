@@ -86,29 +86,29 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
 
-            <plugin>
+           <!-- <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>2.6</version>
                 <configuration>
                     <archive>
-                        <!-- 添加index则不从mainfest中读取classpath，而是从Index.list中读取 -->
-                        <!-- <index>true</index> -->
+                        &lt;!&ndash; 添加index则不从mainfest中读取classpath，而是从Index.list中读取 &ndash;&gt;
+                        &lt;!&ndash; <index>true</index> &ndash;&gt;
                         <manifest>
-                            <!-- 作为程序入口来执行的class -->
+                            &lt;!&ndash; 作为程序入口来执行的class &ndash;&gt;
                             <mainClass>com.wl.DemoExampleServiceApplication</mainClass>
-                            <!-- 是否将依赖的classpath一起打包 -->
+                            &lt;!&ndash; 是否将依赖的classpath一起打包 &ndash;&gt;
                             <addClasspath>true</addClasspath>
-                            <!-- 依赖的classpath的前缀，也就是打包后生成的MANIFEST.MF文件里，引入的jar文件都会加上前缀。lib/，比如fastjson-1.2.7.jar，在mainfest文件里就会是lib/fastjson-1.2.7.jar  -->
+                            &lt;!&ndash; 依赖的classpath的前缀，也就是打包后生成的MANIFEST.MF文件里，引入的jar文件都会加上前缀。lib/，比如fastjson-1.2.7.jar，在mainfest文件里就会是lib/fastjson-1.2.7.jar  &ndash;&gt;
                             <classpathPrefix>lib/</classpathPrefix>
-                            <!--<classpathLayoutType>custom</classpathLayoutType> <customClasspathLayout>
-                                lib/$${artifact.groupId}.$${artifact.artifactId}.$${artifact.extension} </customClasspathLayout> -->
+                            &lt;!&ndash;<classpathLayoutType>custom</classpathLayoutType> <customClasspathLayout>
+                                lib/$${artifact.groupId}.$${artifact.artifactId}.$${artifact.extension} </customClasspathLayout> &ndash;&gt;
                         </manifest>
                         <manifestEntries>
                             <Class-Path>./</Class-Path>
                         </manifestEntries>
                     </archive>
-                    <!-- 打包排除的文件 -->
+                    &lt;!&ndash; 打包排除的文件 &ndash;&gt;
                     <excludes>
                         <exclude>config/**</exclude>
                     </excludes>
@@ -139,6 +139,24 @@
                         </goals>
                     </execution>
                 </executions>
+            </plugin>-->
+            <plugin>
+                <groupId>com.spotify</groupId>
+                <artifactId>docker-maven-plugin</artifactId>
+                <version>0.4.14</version>
+                <configuration>
+                    <serverId>docker-hub</serverId>
+
+                    <imageName>${docker.image.prefix}/${project.artifactId}</imageName>
+                    <dockerDirectory>src/main/docker</dockerDirectory>
+                    <resources>
+                        <resource>
+                            <targetPath>/</targetPath>
+                            <directory>${project.build.directory}</directory>
+                            <include>${project.build.finalName}.jar</include>
+                        </resource>
+                    </resources>
+                </configuration>
             </plugin>
         </plugins>
     </build>

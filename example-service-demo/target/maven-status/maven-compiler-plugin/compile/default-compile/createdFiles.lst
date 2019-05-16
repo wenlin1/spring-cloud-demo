@@ -1,0 +1,6 @@
+com/wl/demo/controller/DemoController.class
+com/wl/comm/ResBody.class
+com/wl/DemoExampleServiceApplication.class
+com/wl/demo/entity/DemoRes.class
+com/wl/demo/entity/DemoReq.class
+com/wl/Swagger2.class

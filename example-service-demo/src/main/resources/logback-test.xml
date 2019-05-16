@@ -2,7 +2,7 @@
 <configuration debug="false">
     <!--定义日志文件的存储地址 勿在 LogBack 的配置中使用相对路径-->
     <property name="SPRING_APPLICATION_NAME" value="example-service-demo" />
-    <property name="LOG_HOME" value="/data/logs/wl/${SPRING_APPLICATION_NAME}" />
+    <property name="LOG_HOME" value="/Users/wenwenlin/data/logs/wl/${SPRING_APPLICATION_NAME}" />
 
     <!-- 彩色日志 -->
     <!-- 彩色日志依赖的渲染类 -->
@@ -50,8 +50,7 @@
         <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
             <MaxFileSize>10MB</MaxFileSize>
         </triggeringPolicy>
-    </appender>
--->
+    </appender>-->
    <!-- &lt;!&ndash;error appender&ndash;&gt;
     <appender name="DAYERROR"  class="ch.qos.logback.core.rolling.RollingFileAppender">
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
@@ -77,7 +76,7 @@
     </appender>-->
 
     <!-- 日志输出级别 -->
-    <root level="debug">
+    <root level="info">
         <appender-ref ref="STDOUT" />
        <!-- <appender-ref ref="DAYINFO" />-->
        <!-- <appender-ref ref="DAYERROR" />-->
